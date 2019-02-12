@@ -1,0 +1,14 @@
+namespace discovery;
+
+class Discovery {
+  //Boolean award;
+  const String SERIALIZED = "ID1234";
+  //lazy description;
+  //origin = "unknown";
+  //unique name;
+  //autounique primaryID;
+  //immutable Integer secondaryID;
+  //lazy immutable inventor;
+  //defaulted type = "standard";
+  //Integer derivedID = { 1000000 * getPrimaryID() + getSecondaryID() }
+}

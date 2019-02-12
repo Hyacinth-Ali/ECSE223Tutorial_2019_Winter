@@ -1,0 +1,58 @@
+namespace ca.mcgill.ecse.btms.model;
+
+class BTMS {
+  1 <@>- * BusVehicle vehicles;
+  // TODO: routes
+  // TODO: assignments
+  // TODO: drivers
+  // TODO: schedule
+  
+  public java.util.Date getCurrentDate() {
+    java.util.Calendar cal = java.util.Calendar.getInstance();
+    cal.set(Calendar.HOUR_OF_DAY, 0);
+    cal.set(Calendar.MINUTE, 0);
+    cal.set(Calendar.SECOND, 0);
+    cal.set(Calendar.MILLISECOND, 0);
+    java.util.Date date = cal.getTime();
+    return date;
+  }
+  
+}
+
+class BusVehicle {
+  String licencePlate;
+  before constructor, setLicencePlate {
+    if (aLicencePlate == null || aLicencePlate.length() == 0) {
+	  throw new RuntimeException("The licence plate of a bus cannot be empty.");
+	}
+	if (aLicencePlate.length() > 10) {
+	  throw new RuntimeException("The licence plate of a bus cannot be longer than 10 characters.");
+	}
+  }
+  // TODO: inRepairShop
+  
+}
+
+class Route {
+  // TODO: number
+}
+
+class RouteAssignment {
+  // TODO: date
+  * -- 1 BusVehicle bus;
+  // TODO: route
+}
+
+class Driver {
+  // TODO: name
+  // TODO: validation for name
+  // TOOD: id
+  // TODO: onSickLeave
+}
+
+class DriverSchedule {
+  // TODO: enum Shift
+  // TODO: shift
+  * -- 1 Driver driver;
+  // TODO: assignment
+}
