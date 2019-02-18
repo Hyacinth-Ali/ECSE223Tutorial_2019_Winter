@@ -251,7 +251,10 @@ public class BtmsPage extends JFrame {
 		busRouteVisualizer = new BusRouteVisualizer();
 		busRouteVisualizer.setMinimumSize(new Dimension(WIDTH_BUS_ROUTE_VISUALIZATION, HEIGHT_BUS_ROUTE_VISUALIZATION));
 		// TODO (Step 2.i) initialize up/down buttons
-		
+		UP = new JButton();
+		UP.setText("UP");
+		DOWN = new JButton();
+		DOWN.setText("DOWN");
 		// global settings
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setTitle("Bus Transportation Management System");
@@ -381,7 +384,11 @@ public class BtmsPage extends JFrame {
 				.addGroup(layout.createParallelGroup()
 						.addComponent(routeList2)
 						// TODO (Step 2.i) add up/down buttons
+						.addGroup(layout.createSequentialGroup()
+								.addComponent(UP)
+								.addComponent(DOWN))
 						// TODO (Step 2.ii) add bus route visualizer
+						.addComponent(busRouteVisualizer)
 						)
 				);
 
@@ -450,7 +457,11 @@ public class BtmsPage extends JFrame {
 				.addGroup(layout.createSequentialGroup()
 						.addComponent(routeList2)
 						// TODO (Step 2.i) add up/down buttons
+						.addGroup(layout.createParallelGroup()
+								.addComponent(UP)
+								.addComponent(DOWN))
 						// TODO (Step 2.ii) add bus route visualizer
+						.addComponent(busRouteVisualizer)
 						)
 				);
 		
@@ -589,6 +600,7 @@ public class BtmsPage extends JFrame {
 
 	private void refreshBusRouteVisualizer() {
 		// TODO (Step 2.ii) call the bus route visualizer to set its route
+		busRouteVisualizer.setRoute(routes.get(routeList2.getSelectedIndex()-1));
 	}
 
 	private void addDriverButtonActionPerformed(java.awt.event.ActionEvent evt) {

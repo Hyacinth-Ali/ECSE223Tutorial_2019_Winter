@@ -50,6 +50,11 @@ class BusRouteVisualizer extends JPanel {
 
 	public void setRoute(TORoute route) {
 		// TODO (Step 2.iii) initialize the route transfer object and all other fields; call repaint() to redraw the graphics
+		this.route = route;
+		busStops = new HashMap<Rectangle2D, TOBusStop>();
+		selectedBusStop = 0;
+		firstVisibleBusStop = 0;
+		repaint();
 	}
 
 	public void moveUp() {
@@ -63,6 +68,9 @@ class BusRouteVisualizer extends JPanel {
 	private void doDrawing(Graphics g) {
 		// TODO (Step 2.iii) replace the current implementation with the following:
 		// - only proceed if the route transfer object is not null
+		if (route != null) {
+			
+		}
 		// - get the number of bus stops from the route transfer object
 		// - draw a line that is long enough to show all bus stops
 		// - use the already provided getBusStopsForRoute() in the BtmsController to loop through a list of bus stop transfer objects
