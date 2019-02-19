@@ -88,8 +88,6 @@ public class BtmsPage extends JFrame {
 	// bus route visualization
 	private JComboBox<String> routeList2;
 	// TODO (Step 2.i) define up/down buttons
-	private JButton UP;
-	private JButton DOWN;
 	private BusRouteVisualizer busRouteVisualizer;
 
 	// data elements

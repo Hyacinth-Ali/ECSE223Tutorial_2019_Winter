@@ -1,4 +1,4 @@
-package ca.mcgill.ecse.btms.view;
+ package ca.mcgill.ecse.btms.view;
 
 import java.awt.Color;
 import java.awt.Component;
